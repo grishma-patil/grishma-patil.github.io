@@ -1,530 +1,382 @@
-<!doctype html>
-<!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
-<html lang="en-gb" class="no-js">
-<!--<![endif]-->
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<!--[if lt IE 9]> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <![endif]-->
-<title>Grishma Patil</title>
-<meta name="description" content="">
-<meta name="author" content="WebThemez">
-<!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-<!--[if lte IE 8]>
-		<script type="text/javascript" src="http://explorercanvas.googlecode.com/svn/trunk/excanvas.js"></script>
-	<![endif]-->
-<link rel="stylesheet" href="css/bootstrap.min.css" />
-<link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />
-<link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
-<link rel="stylesheet" type="text/css" href="css/da-slider.css" />
-<link rel="stylesheet" href="css/styles.css" />
-<!-- Font Awesome -->
-<link href="css/font-awesome.min.css" rel="stylesheet">
-
-<style>
-  .skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: left;
-    justify-content: space-between;
-  }
-  .skill-group {
-    flex-basis: calc(33.333% - 20px); /* Adjust the 20px to increase/decrease space between columns */
-    margin-bottom: 20px;
-  }
-  .skill-group h2 {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  .skill-group ul {
-    list-style: none;
-    padding: 0;
-  }
-  .skill-group ul li::before {
-    content: '✓';
-    color: #4CAF50; /* Change this color to match your design */
-    margin-right: 5px;
-    font-size: 14px;
-  }
-</style>
-</head>
-
-<body>
-<header class="header">
-  <div class="container" style="padding-bottom:5px;">
-    <nav class="navbar navbar-inverse" role="navigation">
-      <div class="navbar-header">
-        <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-        </div>
-      <!--/.navbar-header-->
-      <div id="main-nav" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav" id="mainNav">
-          <li class="active"><a href="#home">Home</a></li>
-          <li><a href="#aboutUs" class="scroll-link">About</a></li>
-	  <li><a href="#education" class="scroll-link">Education</a></li>
-          <li><a href="#skills" class="scroll-link">Skills</a></li>
-          <li><a href="#experience" class="scroll-link">Experience</a></li>
-          <li><a href="#portfolio" class="scroll-link">Projects</a></li>
-          <li><a href="#contactUs" class="scroll-link">Get in Touch</a></li>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">John Doe</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
-      <!--/.navbar-collapse--> 
     </nav>
-    <!--/.navbar--> 
-  </div>
-  <!--/.container--> 
-</header>
-<!--/.header-->
-<div id="#top"></div>
-<section id="home">
-  <div class="banner-container"> <img src="images/wallpaper.1.jpg" alt="banner" />
-    <div class="container banner-content" style="padding-bottom:5px;"> 
-            <div class="row">
-                <header class="centered">
-                    <h1>Grishma Patil</h1>
-                    <p style="font-size: 25px;">Data Explorer & Code Crafter: Transforming Insights into Action</p>
-                </header>
-                <div class="social-icons" style="padding-bottom: 15px;">
-			<a href="mailto:grishma.patil@rutgers.edu"><i class="fa fa-envelope" target="_blank"></i></a>
-                        <a href="https://www.linkedin.com/in/grishmapatil/"><i class="fa fa-linkedin-square" target="_blank"></i></a>
-                        <a href="https://github.com/grishma-patil/"><i class="fa fa-github" target="_blank"></i></a>
-                       
-                </div>
-		    <div id="herobtn">
-            <div class="resumediv" id="resumediv">
-              <a class="resume" id="resume" href="Grishma's Resume.pdf" target="_blank"> <button type="button" style="text-align: center; padding: 14px 40px; font-size: 16px; border-radius: 4px; "> View Resume</button>
-            </a>
+    <nav id="hamburger-nav">
+      <div class="logo">John Doe</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="John Doe profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">John Doe</h1>
+        <p class="section__text__p2">Frontend Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume-example.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://linkedin.com/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>2+ years <br />Frontend Development</p>
             </div>
-  </div>
-</section>
-<!--About-->
-<section id="aboutUs">
-  <div class="container" style="padding-bottom:5px;">
-    <div class="row"> 
-      <!-- item -->
-      <div class="col-md-4 tileBox"> 
-	      <img src="images/Grishma's photo.jpg" alt="Grishma Patil" style="border-radius: 50%; width: 250px; height: 250px; object-fit: cover; border: 5px solid #eaeaea; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
-      </div>
-	      <div class="col-md-8 tileBox">
-        <div class="txtHead" style="padding-top:0px; margin: 0;">
-
-        <p>  
-
-
-Hi, I'm Grishma Patil. I have a strong background in data analytics, with expertise in SQL, Python, and Tableau. My passion lies in transforming raw data into meaningful insights that drive business decisions and improve efficiency.<br/> <br/>
-
-I specialize in data extraction, transformation, and visualization, working with large datasets to uncover trends and optimize processes. My experience also includes building interactive dashboards, enhancing fraud detection models, and leveraging cloud platforms like AWS for scalable data solutions.<br/> <br/>
-
-I enjoy solving complex problems, collaborating with professionals who value data-driven decision-making, and continuously learning about emerging technologies. Let’s connect and explore ways to turn data into actionable insights!<br/> <br/>
-          </p>
-      </div>
-      <!-- end: --> 
-    </div>
-  </div>
-</section>
-
-<!--Quote-->
-<section id="quote" class="bg-parlex">
-  <div class="parlex-back">
-    <div class="container" style="padding-bottom:5px;">
-     <div class="row">
-	<div class="col-md-12">      <h2>“Leverage the power of data, guide your decisions, and navigate toward a future full of limitless opportunities.” </h2></div>
-      </div>
-    </div>
-    <!--/.container--> 
-  </div>
-</section>
-
-<!--Education-->
-<section id="education">
-<div class="container" style="padding-bottom:5px;">
-<div class="heading" style="padding-top: 20px;">
- <h2 style="font-size: 24px; color: #333; text-align: left;"> Education </h2>
-<div style="display: flex; align-items: center; margin-bottom: 20px;">
-    <!-- Column 1: Icon Image -->
-    <div style="flex: 1;">
-        <img src="images/Rutgers.png" alt="Icon" style="max-width: 100px;">
-    </div>
-    <!-- Column 2: Heading and Subheading -->
-    <div style="flex: 2; padding-left: 5px;">
-        <h1 style="font-size: 24px; margin: 0;">Rutgers, The State University of New Jersey, Newark, United States</h1>
-        <p style="font-size: 16px; margin: 0; color: #999;">Master's in Information Technology and Analytics(GPA: 3.7/4.00)</p>
-    </div>
-</div>
-
-<!-- Second Row -->
-<div style="display: flex; align-items: center;">
-    <!-- Column 1: Icon Image -->
-    <div style="flex: 1;">
-        <img src="images/itm.png" alt="Icon" style="max-width: 100px;">
-    </div>
-    <!-- Column 2: Heading and Subheading -->
-    <div style="flex: 2; padding-left: 5px; margin-left: -10px;">
-        <h1 style="font-size: 24px; margin: 0;">ITM University, Gwalior, India</h1>
-        <p style="font-size: 16px; margin: 0; color: #999;">Bachelor's in Electronics and Communication Engineering (GPA: 3.4/4.00)</p>
-    </div>
-</div>
-</div>
-</div>
-</section>
-
-<section id="skills">
-<div class="secPad white" style="padding-bottom:10px;">
-<div class="section" id="skills">
-<div class="container" style="padding-bottom:5px;">
-<div class="heading" style="padding-top: 20px;">
- <h2 style="font-size: 24px; color: #333; text-align: left;"> Skills </h2>
-<div style="display: flex; align-items: center; margin-bottom: 20px;">
-        <section class="Skills">
-            <div class="container-skill" >
-                <div class="mainSkill">
-                    <div class="front" >
-                        <h2>Frontend</h2>
-                        <div class="box">
-                            <div class="frontSkill">
-                                <img src="images/icons/html_html5_icon.png" alt="">
-                                HTML
-                            </div>
-                            <div class="frontSkill">
-                                <img src="images/icons/css3_css_file_development_icon.png" alt="">
-                                CSS
-                            </div>
-                            <div class="frontSkill">
-                                <img src="images/icons/javascript_icon.png" alt="">
-                                JavaScript
-                            </div>
-                            <div class="frontSkill">
-                                <img src="images/icons/react native_react_icon.png" alt="">
-                                React.js
-                            </div>
-                            <div class="frontSkill">
-                                <img src="images/icons/bootstrap_icon.png" alt="">
-                                Bootstrap
-                            </div>
-                        </div>
-                    </div>
-                    <div class="back">
-                        <h2>Backend</h2>
-                        <div class="box">
-                            <div class="backSkill">
-                                <img src="images/icons/node_icon.png" alt="">
-                                Node.js
-                            </div>
-                            <div class="backSkill">
-                                <img src="images/icons/expressjs_logo_icon_169185.png" alt="">
-                                Express.js
-                            </div>
-                            <div class="backSkill">
-                                <img src="images/icons/mongodb_icon.png" alt="">
-                                MongoDB
-                            </div>
-                            <div class="backSkill">
-                                <img src="images/icons/mysql_icon.png" alt="">
-                                MYSQL
-                            </div>
-                            <div class="backSkill">
-                                <img src="images/icons/python_icon.png" alt="">
-                                Python
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tools">
-                        <h2>Tools & Services</h2>
-                        <div class="box">
-                            <div class="toolsSkill">
-                                <img src="images/icons/git_icon.png" alt="">
-                                Git
-                            </div>
-                            <div class="toolsSkill">
-                                <img src="images/icons/github_icon.png" alt="">
-                                Github
-                            </div>
-                            <div class="toolsSkill">
-                              <img src="images/icons/vscode_fill_icon.png" alt="">
-                              VS Code
-                              </div>
-                                <div class="toolsSkill">
-                                    <img src="images/icons/docker.png" alt="">
-                                    Docker
-                                </div>
-                            <div class="toolsSkill">
-                                <img src="images/icons/jupiter-notebook.png" alt="">
-                                Jupyter Notebook
-                            </div>
-                            <div class="toolsSkill">
-                                <img src="images/icons/postman_icon.png" alt="">
-                                Postman
-                            </div>
-                            <div class="toolsSkill">
-                                <img src="images/icons/canva-icon-512x512-q41pwse8.png" alt="">
-                                Canva
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="datasci">
-                      <h2>Cloud Services & OS</h2>
-                      <div class="box">
-                          <div class="datasciSkill">
-                              <img src="/img/icons/linux-platform.png" alt="">
-                              Linux  
-                          </div>
-                          <div class="datasciSkill">
-                              <img src="/img/icons/linux-platform.png" alt="">
-                              Linux  
-                          </div>
-                          <div class="datasciSkill">
-                              <img src="/img/icons/azure.png" alt="">
-                              Microsoft Azure 
-                          </div>
-                      </div>
-                  </div> -->
-                </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
             </div>
-        </section>
-
-    </div>     
-   
-<section id="experience" class="secPad">
-<div class="container" style="padding-bottom:5px;">
-<div class="heading"> 
-  <!-- Heading -->
-  <h2 style="font-size: 24px; color: #333; text-align: left;"> Work Experience</h2>
-		      
-  <!--/Portfolio --> 
-<section id="experience">
-<div class="container">
-    <section id="news" class="white-bg padding-top-bottom">
-    	<div class="container">
-			<div class="timeline">
-				<div class="date-title">
-					<span>2023</span>
-				</div>
-				<div class="row">
-					<div class="col-sm-6 news-item">
-						<div class="news-content">
-							<div class="date">
-								<p>Oct 2023</p> 
-							</div>
-							<h2 class="news-title">Rutgers Univeristy, Newark, NJ, US</h2> 
-							<span>Data Analyst</span>
-							<p>October 2023 – Present 
-								<p>• Analyzed information using SQL for extraction and manipulation, ensuring data integrity and data accuracy for various university 10 departments. </p>
-<p> •	Collaborated with cross-functional teams to implement a centralized database system, reducing accommodation request processing time by 40% and improving communication between staff and students. </p>
-<p> •	Designed and implemented data models to improve data sourcing, data privacy, and quality, aligned with business requirements, resulting in a 20% increase in efficiency. </p>
-</p>
-						</div>
-					</div>
-					
-					<div class="col-sm-6 news-item right">
-						<div class="news-content">
-							<div class="date">
-								<p>July 2022</p> 
-							</div>
-							<h2 class="news-title">Cognziant, Pune, India</h2> 
-							<span>Programmer Analyst</span>
-							<p> July 2022 - August 2023<p> •	Conducted data collection and data requirement analysis on millions of transactional records from banking applications using SQL, identifying patterns that increased fraud detection accuracy by 30%. </p>
-<p>•	 Demonstrated strong understanding of data through analyzing complex datasets and identifying key trends to support business processes.
-<p>•	Created and maintained interactive reporting dashboards in Tableau to track B2B transaction volumes, customer activities, and account balances, improving real-time data access aiding strategic decision making. </p>
-<p>•	Utilized Python (Pandas, NumPy) for statistical analysis and data mining, conducting exploratory data analysis (EDA) on large datasets to uncover insights into customer spending behavior and transaction trends. </p>
-<p>•	Executed extraction and complex analysis using AWS to transform and load big data, generating reports on transaction times, error rates, system performance metrics, and market analysis for compliance and operational excellence. </p>
-<p>•	Improved test data quality and privacy by conducting root cause analysis on transaction failures and system downtimes using Informatica, which provides information and data-driven insights for business priorities.</p>
-</p>
-						</div>
-					</div>
-				</div>
-				
-				<div class="row">
-					<div class="col-sm-6 news-item">
-						<div class="news-content">
-							<div class="date">
-								<p>Jan 2022</p> 
-							</div>
-							<h2 class="news-title">Cognziant, Pune, India</h2> 
-							<span>Programmer Analyst Trainee</span> 
-							<p>January 2022 - June 2022 <p> •	Automated ETL processes to efficiently process data from time sheets using Alteryx and Power Automate, reducing manual workload by 70% and significantly increasing data processing speed.</p>
-<p>•	Utilized Hadoop for data warehousing and big data processing, integrating and handling time sheet data from 50 sources into a centralized data lake, improving data management, and interpretation of data. </p>
-<p>•	Developed interactive dashboards and reports using Power BI to visualize time sheet data, key performance indicators (KPI) providing real-time insights to stakeholders and improving transparency.</p>
-</p>
-						</div>
-					</div>
-			</div>
-		</div>
-	</section>
-</div>				                                                      
-</section> 
-
-
-<!--Portfolio-->
-<section id="portfolio" class="page-section section appear clearfix secPad">
-  <div class="container" style="padding-bottom:5px;">
-    <div class="heading"> 
-
-      <!-- Heading -->
-       <h2 style="font-size: 24px; color: #333; text-align: left;"> Projects </h2>
-    </div>
-      <div class="col-md-12">
-        <div class="row">
-            <article class="col-sm-4 isotopeItem">
-              <div class="portfolio-item"> <img src="images/taxi.jpg" alt="" />
-                <div class="portfolio-desc align-center">
-                  <div class="folio-info"> <a href="https://github.com/grishma-patil/Predicting-Taxi-Trip-Duration-in-NYC-using-Machine-Learning" class="fancybox" target="_blank">
-                    <h4>Predicting Taxi Trip Duration in NYC using Machine Learning</h4>
-                     </a> </div>
-                </div>
-              </div>
-            </article>
-            <article class="col-sm-4 isotopeItem">
-              <div class="portfolio-item"> <img src="images/GlobalUnemployment.jpg" alt="" />
-                <div class="portfolio-desc align-center">
-                  <div class="folio-info"> <a href="https://github.com/grishma-patil/Global-Unemployment-Multivariate-Anlaysis" class="fancybox" target="_blank">
-                    <h4>Global Unemployment Multivariate Anlaysis</h4>
-                   </a> </div>
-                </div>
-              </div>
-            </article>
-            <article class="col-sm-4 isotopeItem">
-              <div class="portfolio-item"> <img src="images/Socialmediaanalysis.jpg" alt="" />
-                <div class="portfolio-desc align-center">
-                  <div class="folio-info"> <a href="https://github.com/grishma-patil/Social-Media-Multivariate-Analysis" class="fancybox" target="_blank">
-                    <h4>Social Media Multivariate Analysis</h4>
-                 </a> </div>
-                </div>
-              </div>
-            </article>
-	  </div>
-	  </div>
-	  </div>
           </div>
+          <div class="text-container">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
+              reprehenderit et laborum, rem, dolore eum quod voluptate
+              exercitationem nobis, nihil esse debitis maxime facere minus sint
+              delectus velit in eos quo officiis explicabo deleniti dignissimos.
+              Eligendi illum libero dolorum cum laboriosam corrupti quidem,
+              reiciendis ea magnam? Nulla, impedit fuga!
+            </p>
+          </div>
+        </div>
       </div>
-  </div>
-</section>
-
-<!--Contact -->
-<section id="contactUs" class="page-section secPad">
-  <div class="container" style="padding-bottom:5px;">
-    <div class="row">
-      <div class="heading"> 
-        <!-- Heading -->
-        <h2>Let's Keep In Touch!</h2>
-        <p>Thank you for visiting out my profile. If you would like to get into contact with me, please fill out the form below.</p>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SASS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TypeScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Material UI</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PostgreSQL</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Express JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <form id="myForm" action="https://formspree.io/f/mzblvvog" method="POST">
-  <div class="form-group">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" class="form-control" required placeholder="Enter your name" style="width: 100%;">
-  </div>
-  <div class="form-group">
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" class="form-control" required placeholder="Enter your Email" style="width: 100%;">
-  </div>
-  <div class="form-group">
-    <label for="phone">Phone Number</label>
-    <input type="phone" id="phone" name="phone" class="form-control" required placeholder="Enter your Phone Number" style="width: 100%;">
-  </div>
-  <div class="form-group">
-    <label for="message">Message</label>
-    <textarea id="message" name="message" class="form-control" rows="4" placeholder="Enter your Message" style="width: 100%;"></textarea>
-  </div>
-  <!-- your other form fields go here -->
-  <button type="submit" class="btn btn-primary" style="width: 200px; margin-bottom: 20px;">Submit</button>
-</form>
-    </div>
-  </div>
-</div>
-<div id="message-container" style="padding-left: 20px">
-  <!-- The message will be displayed here -->
-</div>
-
-  </div>
-  <!--/.container--> 
-</section>
-
-<!--/.page-section-->
-<footer class="copyright">
-  <div class="container" style="padding-bottom:5px;">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="social pull-left"> <a href="mailto:grishma.patil@rutgers.edu"><i class="fa fa-envelope" target="_blank"></i></a>
-                        <a href="https://www.linkedin.com/in/grishmapatil/"><i class="fa fa-linkedin-square" target="_blank"></i></a>
-                        <a href="https://github.com/grishma-patil/"><i class="fa fa-github" target="_blank"></i></a> </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project One</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-md-6"> <span class="pull-right">Copyright | Grishma Patil </span> </div>
-    </div>
-    <!-- / .row --> 
-  </div>
-</footer>
-<a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a> 
-	
-
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  // Get the form element
-  const form = document.getElementById("myForm");
-
-  // Get the message container
-  const messageContainer = document.getElementById("message-container");
-
-  form.addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent the form from submitting normally
-
-    // Get the form data
-    const formData = new FormData(form);
-
-    // Send a POST request to Formspree
-    fetch("https://formspree.io/f/mzblvvog", {
-      method: "POST",
-      body: formData,
-    })
-      .then((response) => {
-        if (response.ok) {
-          // Form submission was successful
-          messageContainer.innerHTML = "Details submitted successfully. We will be in touch soon!";
-          messageContainer.classList.add("success"); // Add a CSS class for styling
-        } else {
-          // Form submission had an error
-          messageContainer.innerHTML = "Details submitted successfully. We will be in touch soon!";
-          messageContainer.classList.add("success"); // Add a CSS class for styling
-        }
-      })
-      .catch((error) => {
-        // Handle any network errors here
-        console.error("Network error:", error);
-        messageContainer.innerHTML = "Details submitted successfully. We will be in touch soon!";
-        messageContainer.classList.add("success"); // Add a CSS class for styling
-      });
-
-    // Reset the form after submission
-    setTimeout(function () {
-      form.reset();
-      // Clear the message after a few seconds
-      setTimeout(function () {
-        messageContainer.innerHTML = "";
-        messageContainer.classList.remove("success", "error");
-      }, 5); // Delay for 5 seconds (adjust as needed)
-    }, 5); // Delay for 500 milliseconds (adjust as needed)
-  });
-});
-</script>	
-<!--[if lte IE 8]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><![endif]--> 
-<script src="js/modernizr-latest.js"></script> 
-<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script> 
-<script src="js/bootstrap.min.js" type="text/javascript"></script> 
-<script src="js/jquery.isotope.min.js" type="text/javascript"></script> 
-<script src="js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script> 
-<script src="js/jquery.nav.js" type="text/javascript"></script> 
-<script src="js/jquery.cslider.js" type="text/javascript"></script> 
-<script src="js/jquery.diagram.js"></script> 
-<script src="js/custom.js" type="text/javascript"></script> 
-<script src="js/owl-carousel/owl.carousel.js"></script>
-</body>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:examplemail@gmail.com">Example@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2023 John Doe. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
